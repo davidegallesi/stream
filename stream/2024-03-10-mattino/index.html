@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stream</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
+  <link rel="alternate" type="application/atom+xml" title="Stream — tutti i post" href="/feed.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Stream — note"        href="/feed/note.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Stream — link"        href="/feed/link.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Stream — citazioni"   href="/feed/quote.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Stream — immagini"    href="/feed/image.xml" />
+<script>
+  (function() {
+    const manual = sessionStorage.getItem('theme-override');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const isDark = manual ? manual === 'dark' : prefersDark;
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  })();
+</script>
+</head>
+<body>
+  <header>
+    <h1><a href="/">A life stream</a></h1>
+    <nav>
+      <a href="/archivio/" >archivio</a>
+      <a href="/now/" >now</a>
+      <button id="theme-toggle" title="Cambia tema" aria-label="Cambia tema">
+        <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+      <a href="/feed.xml" class="rss-link" title="Feed RSS generale" aria-label="RSS">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M6.18 15.64a2.18 2.18 0 0 1 2.18 2.18C8.36 19.01 7.38 20 6.18 20C4.98 20 4 19.01 4 17.82a2.18 2.18 0 0 1 2.18-2.18M4 4.44A15.56 15.56 0 0 1 19.56 20h-2.83A12.73 12.73 0 0 0 4 7.27V4.44m0 5.66a9.9 9.9 0 0 1 9.9 9.9h-2.83A7.07 7.07 0 0 0 4 12.93V10.1z"/>
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  
+<article class="post single-post">
+  <div class="post-meta">
+    <span class="post-type note" title="note">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.2635 2.29289C20.873 1.90237 20.2398 1.90237 19.8493 2.29289L18.9769 3.16525C17.8618 2.63254 16.4857 2.82801 15.5621 3.75165L4.95549 14.3582L10.6123 20.0151L21.2189 9.4085C22.1426 8.48486 22.338 7.1088 21.8053 5.99367L22.6777 5.12132C23.0682 4.7308 23.0682 4.09763 22.6777 3.70711L21.2635 2.29289ZM16.9955 10.8035L10.6123 17.1867L7.78392 14.3582L14.1671 7.9751L16.9955 10.8035ZM18.8138 8.98525L19.8047 7.99429C20.1953 7.60376 20.1953 6.9706 19.8047 6.58007L18.3905 5.16586C18 4.77534 17.3668 4.77534 16.9763 5.16586L15.9853 6.15683L18.8138 8.98525Z" fill="currentColor"/><path d="M2 22.9502L4.12171 15.1717L9.77817 20.8289L2 22.9502Z" fill="currentColor"/></svg>
+    </span>
+    <time datetime="2026-03-02">
+      2 marzo 2026 &middot; 10:15
+    </time>
+  </div>
+  <div class="post-body">
+    
+      <p>Il silenzio del mattino è l'unico momento in cui riesco a pensare con chiarezza. Tutto il resto della giornata è rumore.</p>
+
+    
+  </div>
+</article>
+
+
+
+<section class="backlinks">
+  <h2 class="backlinks-title">Citato in</h2>
+  <ul class="backlinks-list">
+    
+    <li>
+      <a href="/stream/date 2026-03-02T09 15 00/">
+        3 marzo 2026
+        <span class="backlink-type note" title="note">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.2635 2.29289C20.873 1.90237 20.2398 1.90237 19.8493 2.29289L18.9769 3.16525C17.8618 2.63254 16.4857 2.82801 15.5621 3.75165L4.95549 14.3582L10.6123 20.0151L21.2189 9.4085C22.1426 8.48486 22.338 7.1088 21.8053 5.99367L22.6777 5.12132C23.0682 4.7308 23.0682 4.09763 22.6777 3.70711L21.2635 2.29289ZM16.9955 10.8035L10.6123 17.1867L7.78392 14.3582L14.1671 7.9751L16.9955 10.8035ZM18.8138 8.98525L19.8047 7.99429C20.1953 7.60376 20.1953 6.9706 19.8047 6.58007L18.3905 5.16586C18 4.77534 17.3668 4.77534 16.9763 5.16586L15.9853 6.15683L18.8138 8.98525Z" fill="currentColor"/><path d="M2 22.9502L4.12171 15.1717L9.77817 20.8289L2 22.9502Z" fill="currentColor"/></svg>
+        </span>
+      </a>
+    </li>
+    
+  </ul>
+</section>
+
+
+
+  <footer>
+    10 post
+  </footer>
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const mq = window.matchMedia('(prefers-color-scheme: dark)');
+
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+
+  // Toggle manuale: salva preferenza solo per questa sessione
+  toggle.addEventListener('click', function() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    const next = isDark ? 'light' : 'dark';
+    sessionStorage.setItem('theme-override', next);
+    applyTheme(next);
+  });
+
+  // Segue sempre il sistema, a meno che l'utente non abbia scelto manualmente
+  mq.addEventListener('change', function(e) {
+    if (!sessionStorage.getItem('theme-override')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+</script>
+</body>
+</html>

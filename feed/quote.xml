@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Stream — quote</title>
+  <subtitle>Solo post di tipo quote.</subtitle>
+  <link href="http://204.168.147.176/feed/quote.xml" rel="self"/>
+  <link href="http://204.168.147.176/"/>
+  <id>http://204.168.147.176/feed/quote/</id>
+  
+  <updated>2026-03-05T15:27:28.000Z</updated>
+  
+  
+  <entry>
+    <title>quote — 2026-03-05</title>
+    <link href="http://204.168.147.176/stream/2026-03-05T15-27-28-quote/"/>
+    <id>http://204.168.147.176/stream/2026-03-05T15-27-28-quote/</id>
+    <updated>2026-03-05T15:27:28.000Z</updated>
+    <content type="html"><![CDATA[<p>Stat rosa pristina nomine nomina nuda tenemus.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>quote — 2026-03-04</title>
+    <link href="http://204.168.147.176/stream/2024-03-12-calvino/"/>
+    <id>http://204.168.147.176/stream/2024-03-12-calvino/</id>
+    <updated>2026-03-04T16:05:00.000Z</updated>
+    <content type="html"><![CDATA[<p>Adesso vi spiego. Quel suo discorso è certo una menzogna, parola per parola; ma poiché tutti se ne rendono conto, possiamo ben considerarlo un discorso onesto, non vi pare?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>quote — 2026-02-12</title>
+    <link href="http://204.168.147.176/stream/2026-03-04-akutagawa/"/>
+    <id>http://204.168.147.176/stream/2026-03-04-akutagawa/</id>
+    <updated>2026-02-12T11:00:00.000Z</updated>
+    <content type="html"><![CDATA[<p>Il vero viaggio nella scoperta non consiste nel cercare nuovi territori, ma nell'avere nuovi occhi.</p>
+]]></content>
+  </entry>
+  
+</feed>
