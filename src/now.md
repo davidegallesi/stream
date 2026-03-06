@@ -4,10 +4,6 @@ pageTitle: Now — Stream
 permalink: /now/
 ---
 
-Hello, my name is Davide I live in Milano, Italy. It's winter and this is what I'm doing now.
-
-I am a person that writes stuff, this is (or will be) the **now** page.
-
 Hello, my name is Davide Gallesi I live in [Milano](https://en.wikipedia.org/wiki/Milano), Italy. It's spring (I love spring) and this is what I'm doing now.
 
 - Loving and living my family.
