@@ -228,6 +228,35 @@ blockquote cite {
 .filter-btn svg { width: 12px; height: 12px; }
 .filter-btn:hover  { background: var(--border); }
 .filter-btn.active { background: var(--text); color: var(--bg); border-color: var(--text); }
+.year-select-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.year-select-chevron {
+  position: absolute;
+  right: 0.65rem;
+  pointer-events: none;
+  display: block;
+  color: var(--text);
+}
+.year-select {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.3rem 1.6rem 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--filter-bg);
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: background 0.15s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.year-select:hover { background: var(--border); }
 
 /* ---- NOW PAGE ---- */
 .now-body h2 {
