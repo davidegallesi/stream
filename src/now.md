@@ -4,7 +4,7 @@ pageTitle: Now — Stream
 permalink: /now/
 ---
 
-Hello, my name is Davide Gallesi I live in [Milano](https://en.wikipedia.org/wiki/Milano), Italy. It's spring (I love spring) and this is what I'm doing now.
+Hello, my name is Davide Gallesi I live in [Milano](https://en.wikipedia.org/wiki/Milano), Italy. It's almost spring (I love spring) and this is what I'm doing now.
 
 - Loving and living my family.
 - Working with passion to grow my (really) [small company](https://www.nexo.me).
