@@ -2,17 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Stream — note</title>
   <subtitle>Solo post di tipo note.</subtitle>
-  <link href="http://204.168.147.176/feed/note.xml" rel="self"/>
-  <link href="http://204.168.147.176/"/>
-  <id>http://204.168.147.176/feed/note/</id>
+  <link href="https://davidegallesi.github.io/stream/feed/note.xml" rel="self"/>
+  <link href="https://davidegallesi.github.io/stream/"/>
+  <id>https://davidegallesi.github.io/stream/feed/note/</id>
   
   <updated>2026-03-05T15:25:08.000Z</updated>
   
   
   <entry>
     <title>note — 2026-03-05</title>
-    <link href="http://204.168.147.176/stream/2026-03-05T15-25-08-note/"/>
-    <id>http://204.168.147.176/stream/2026-03-05T15-25-08-note/</id>
+    <link href="https://davidegallesi.github.io/stream/stream/2026-03-05T15-25-08-note/"/>
+    <id>https://davidegallesi.github.io/stream/stream/2026-03-05T15-25-08-note/</id>
     <updated>2026-03-05T15:25:08.000Z</updated>
     <content type="html"><![CDATA[<p>Questo è un post creato con lo script <code>new-post-js</code>. Lo ho creato solo per verificare che funzioni tutto.</p>
 ]]></content>
@@ -20,8 +20,8 @@
   
   <entry>
     <title>note — 2026-03-03</title>
-    <link href="http://204.168.147.176/stream/date 2026-03-02T09 15 00/"/>
-    <id>http://204.168.147.176/stream/date 2026-03-02T09 15 00/</id>
+    <link href="https://davidegallesi.github.io/stream/stream/date 2026-03-02T09 15 00/"/>
+    <id>https://davidegallesi.github.io/stream/stream/date 2026-03-02T09 15 00/</id>
     <updated>2026-03-03T11:37:00.000Z</updated>
     <content type="html"><![CDATA[<p>Vorrei provare a capire se riesco a usare i WikiLinks in maniera produttiva, per esempio ora potrei aggiungere il link a un documento presente in questa cartella come [[./2024-03-10-mattino|questo]]. Vediamo come lo gestisce il generatore di 11ty. La generazione sembra funzionare molto bene, ora ne provo un'altra [[./2024-03-11-digital-garden|a digression on Digital Gardens]]. Vediamo se tutto funziona come deve.</p>
 <p>Funziona tutto, ora devo solo trovare il modo di distinguere i WikiLinks, che son link interni, dai link veri e propri. Questo per esempio è un <a href="https://marginalia.cc">link al mio blog attuale</a>, vediamo come viene trattato.</p>
@@ -30,8 +30,8 @@
   
   <entry>
     <title>note — 2026-03-02</title>
-    <link href="http://204.168.147.176/stream/2024-03-10-mattino/"/>
-    <id>http://204.168.147.176/stream/2024-03-10-mattino/</id>
+    <link href="https://davidegallesi.github.io/stream/stream/2024-03-10-mattino/"/>
+    <id>https://davidegallesi.github.io/stream/stream/2024-03-10-mattino/</id>
     <updated>2026-03-02T09:15:00.000Z</updated>
     <content type="html"><![CDATA[<p>Il silenzio del mattino è l'unico momento in cui riesco a pensare con chiarezza. Tutto il resto della giornata è rumore.</p>
 ]]></content>
