@@ -25,6 +25,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("stream", function (collectionApi) {
     return collectionApi
       .getFilteredByGlob("src/stream/*.md")
+      .filter((p) => p.data.published !== false)
       .sort((a, b) => b.date - a.date);
   });
 
@@ -32,7 +33,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection(`stream_${type}`, function (collectionApi) {
       return collectionApi
         .getFilteredByGlob("src/stream/*.md")
-        .filter((p) => p.data.type === type)
+        .filter((p) => p.data.published !== false && p.data.type === type)
         .sort((a, b) => b.date - a.date);
     });
   });
