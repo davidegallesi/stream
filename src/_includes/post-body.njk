@@ -1,0 +1,23 @@
+{% if post.data.type == "quote" %}
+  <blockquote>
+    {{ post.templateContent | safe }}
+    {% if post.data.author %}<cite>— {{ post.data.author }}</cite>{% endif %}
+  </blockquote>
+
+{% elif post.data.type == "link" %}
+  <a class="external-link" href="{{ post.data.url }}" target="_blank" rel="noopener">
+    ↗ {{ post.data.linkTitle or post.data.url }}
+  </a>
+  {% if post.templateContent %}<p class="link-desc">{{ post.templateContent | safe }}</p>{% endif %}
+
+{% elif post.data.type == "image" %}
+  {% if post.data.image %}
+  <figure class="post-image">
+    <img src="{{ post.data.image | url }}" alt="{{ post.data.imageAlt or '' }}" loading="lazy" />
+    {% if post.templateContent %}<figcaption>{{ post.templateContent | safe }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+
+{% else %}
+  {{ post.templateContent | safe }}
+{% endif %}

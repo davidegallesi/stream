@@ -1,0 +1,24 @@
+---
+layout: base.njk
+pageTitle: Stream
+---
+
+{% set twoMonthsAgo = collections.stream | twoMonthsAgo %}
+
+{% for post in collections.stream %}
+  {% if post.date >= twoMonthsAgo %}
+  <article class="post">
+    <div class="post-meta">
+      <span class="post-type {{ post.data.type }}" title="{{ post.data.type }}">
+        {{ post.data.type | postIcon | safe }}
+      </span>
+      <time datetime="{{ post.date | htmlDateString }}">
+        {{ post.date | dataLeggibile }} &middot; {{ post.date | ora }}
+      </time>
+    </div>
+    <div class="post-body">
+      {% include "post-body.njk" %}
+    </div>
+  </article>
+  {% endif %}
+{% endfor %}

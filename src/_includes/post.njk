@@ -1,0 +1,55 @@
+---
+layout: base.njk
+---
+
+<article class="post single-post">
+  <div class="post-meta">
+    <span class="post-type {{ type }}" title="{{ type }}">
+      {{ type | postIcon | safe }}
+    </span>
+    <time datetime="{{ page.date | htmlDateString }}">
+      {{ page.date | dataLeggibile }} &middot; {{ page.date | ora }}
+    </time>
+  </div>
+  <div class="post-body">
+    {% if type == "quote" %}
+      <blockquote>
+        {{ content | safe }}
+        {% if author %}<cite>— {{ author }}</cite>{% endif %}
+      </blockquote>
+    {% elif type == "link" %}
+      <a class="external-link" href="{{ url }}" target="_blank" rel="noopener">
+        ↗ {{ linkTitle or url }}
+      </a>
+      {% if content %}<p class="link-desc">{{ content | safe }}</p>{% endif %}
+    {% elif type == "image" %}
+      {% if image %}
+      <figure class="post-image">
+        <img src="{{ image | url }}" alt="{{ imageAlt or '' }}" loading="lazy" />
+        {% if content %}<figcaption>{{ content | safe }}</figcaption>{% endif %}
+      </figure>
+      {% endif %}
+    {% else %}
+      {{ content | safe }}
+    {% endif %}
+  </div>
+</article>
+
+{% set backlinks = page.inputPath | backlinksFor(collections.stream) %}
+{% if backlinks.length %}
+<section class="backlinks">
+  <h2 class="backlinks-title">Citato in</h2>
+  <ul class="backlinks-list">
+    {% for post in backlinks %}
+    <li>
+      <a href="{{ post.url | url }}">
+        {{ post.date | dataLeggibile }}
+        <span class="backlink-type {{ post.data.type }}" title="{{ post.data.type }}">
+          {{ post.data.type | postIcon | safe }}
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

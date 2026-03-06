@@ -1,0 +1,24 @@
+---
+permalink: /feed/link.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Stream — link</title>
+  <subtitle>Solo post di tipo link.</subtitle>
+  <link href="{{ site.siteUrl }}/feed/link.xml" rel="self"/>
+  <link href="{{ site.siteUrl }}/"/>
+  <id>{{ site.siteUrl }}/feed/link/</id>
+  {% if collections.stream_link.length %}
+  <updated>{{ collections.stream_link[0].date | rfc3339 }}</updated>
+  {% endif %}
+  {% for post in collections.stream_link | head(20) %}
+  <entry>
+    <title>link — {{ post.date | htmlDateString }}</title>
+    <link href="{{ site.siteUrl }}{{ post.url }}"/>
+    <id>{{ site.siteUrl }}{{ post.url }}</id>
+    <updated>{{ post.date | rfc3339 }}</updated>
+    <content type="html"><![CDATA[{% if post.data.url %}<p><a href="{{ post.data.url }}">{{ post.data.linkTitle or post.data.url }}</a></p>{% endif %}{{ post.templateContent | safe }}]]></content>
+  </entry>
+  {% endfor %}
+</feed>
