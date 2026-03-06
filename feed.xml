@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Stream</title>
+  <subtitle>Pensieri, link, citazioni e digressioni.</subtitle>
+  <link href="https://davidegallesi.github.io/stream/feed.xml" rel="self"/>
+  <link href="https://davidegallesi.github.io/stream/"/>
+  <id>https://davidegallesi.github.io/stream/</id>
+  
+  <updated>2026-03-05T15:27:28.000Z</updated>
+  
+  
+  <entry>
+    <title>quote — 2026-03-05</title>
+    <link href="https://davidegallesi.github.io/stream/stream/2026-03-05T15-27-28-quote/"/>
+    <id>https://davidegallesi.github.io/stream/stream/2026-03-05T15-27-28-quote/</id>
+    <updated>2026-03-05T15:27:28.000Z</updated>
+    <content type="html"><![CDATA[<p>Stat rosa pristina nomine nomina nuda tenemus.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>note — 2026-03-05</title>
+    <link href="https://davidegallesi.github.io/stream/stream/2026-03-05T15-25-08-note/"/>
+    <id>https://davidegallesi.github.io/stream/stream/2026-03-05T15-25-08-note/</id>
+    <updated>2026-03-05T15:25:08.000Z</updated>
+    <content type="html"><![CDATA[<p>Questo è un post creato con lo script <code>new-post-js</code>. Lo ho creato solo per verificare che funzioni tutto.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>link — 2026-03-05</title>
+    <link href="https://davidegallesi.github.io/stream/stream/www.mantellini.it 2026.03.05 assorbire-paesaggi/"/>
+    <id>https://davidegallesi.github.io/stream/stream/www.mantellini.it 2026.03.05 assorbire-paesaggi/</id>
+    <updated>2026-03-05T11:37:00.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://www.mantellini.it/2026/03/05/assorbire-paesaggi/">Manteblog - Lucio Mastronardi</a></p><p>Il maestro di Vigevano nella reading list, ad alimentare il mio Tsundoku e i miei sensi di colpa.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>link — 2026-03-04</title>
+    <link href="https://davidegallesi.github.io/stream/stream/date 2026-03-03T11 37 00/"/>
+    <id>https://davidegallesi.github.io/stream/stream/date 2026-03-03T11 37 00/</id>
+    <updated>2026-03-04T16:18:00.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://sixcolors.com/link/2026/01/report-apple-developing-a-wearable-pin/">A wearable pin</a></p><p>Does such a device fit in the future, or would it be pointless and redundant?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>quote — 2026-03-04</title>
+    <link href="https://davidegallesi.github.io/stream/stream/2024-03-12-calvino/"/>
+    <id>https://davidegallesi.github.io/stream/stream/2024-03-12-calvino/</id>
+    <updated>2026-03-04T16:05:00.000Z</updated>
+    <content type="html"><![CDATA[<p>Adesso vi spiego. Quel suo discorso è certo una menzogna, parola per parola; ma poiché tutti se ne rendono conto, possiamo ben considerarlo un discorso onesto, non vi pare?</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>image — 2026-03-04</title>
+    <link href="https://davidegallesi.github.io/stream/stream/2026-03-04-image/"/>
+    <id>https://davidegallesi.github.io/stream/stream/2026-03-04-image/</id>
+    <updated>2026-03-04T15:53:00.000Z</updated>
+    <content type="html"><![CDATA[<figure><img src="https://davidegallesi.github.io/stream/img/pics/pianura.jpg" alt="Descrizione dell&#39;immagine" /></figure><p>Questa è la didascalia opzionale. Posso usarla per descrivere nel dettaglio l'immagine oppure per pubblicare i dati EXIF.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>note — 2026-03-03</title>
+    <link href="https://davidegallesi.github.io/stream/stream/date 2026-03-02T09 15 00/"/>
+    <id>https://davidegallesi.github.io/stream/stream/date 2026-03-02T09 15 00/</id>
+    <updated>2026-03-03T11:37:00.000Z</updated>
+    <content type="html"><![CDATA[<p>Vorrei provare a capire se riesco a usare i WikiLinks in maniera produttiva, per esempio ora potrei aggiungere il link a un documento presente in questa cartella come [[./2024-03-10-mattino|questo]]. Vediamo come lo gestisce il generatore di 11ty. La generazione sembra funzionare molto bene, ora ne provo un'altra [[./2024-03-11-digital-garden|a digression on Digital Gardens]]. Vediamo se tutto funziona come deve.</p>
+<p>Funziona tutto, ora devo solo trovare il modo di distinguere i WikiLinks, che son link interni, dai link veri e propri. Questo per esempio è un <a href="https://marginalia.cc">link al mio blog attuale</a>, vediamo come viene trattato.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>note — 2026-03-02</title>
+    <link href="https://davidegallesi.github.io/stream/stream/2024-03-10-mattino/"/>
+    <id>https://davidegallesi.github.io/stream/stream/2024-03-10-mattino/</id>
+    <updated>2026-03-02T09:15:00.000Z</updated>
+    <content type="html"><![CDATA[<p>Il silenzio del mattino è l'unico momento in cui riesco a pensare con chiarezza. Tutto il resto della giornata è rumore.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>quote — 2026-02-12</title>
+    <link href="https://davidegallesi.github.io/stream/stream/2026-03-04-akutagawa/"/>
+    <id>https://davidegallesi.github.io/stream/stream/2026-03-04-akutagawa/</id>
+    <updated>2026-02-12T11:00:00.000Z</updated>
+    <content type="html"><![CDATA[<p>Il vero viaggio nella scoperta non consiste nel cercare nuovi territori, ma nell'avere nuovi occhi.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title>link — 2024-03-11</title>
+    <link href="https://davidegallesi.github.io/stream/stream/2024-03-11-digital-garden/"/>
+    <id>https://davidegallesi.github.io/stream/stream/2024-03-11-digital-garden/</id>
+    <updated>2024-03-11T14:40:00.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://maggieappleton.com/garden-history">A Brief History &amp; Ethos of the Digital Garden</a></p><p>Un'ottima panoramica sull'idea di &quot;digital garden&quot; come alternativa ai blog tradizionali. Cambio di prospettiva interessante sul pubblicare online.</p>
+]]></content>
+  </entry>
+  
+</feed>

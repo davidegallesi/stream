@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Stream — image</title>
+  <subtitle>Solo post di tipo image.</subtitle>
+  <link href="https://davidegallesi.github.io/stream/feed/image.xml" rel="self"/>
+  <link href="https://davidegallesi.github.io/stream/"/>
+  <id>https://davidegallesi.github.io/stream/feed/image/</id>
+  
+  <updated>2026-03-04T15:53:00.000Z</updated>
+  
+  
+  <entry>
+    <title>image — 2026-03-04</title>
+    <link href="https://davidegallesi.github.io/stream/stream/2026-03-04-image/"/>
+    <id>https://davidegallesi.github.io/stream/stream/2026-03-04-image/</id>
+    <updated>2026-03-04T15:53:00.000Z</updated>
+    <content type="html"><![CDATA[<figure><img src="https://davidegallesi.github.io/stream/img/pics/pianura.jpg" alt="Descrizione dell&#39;immagine" /></figure><p>Questa è la didascalia opzionale. Posso usarla per descrivere nel dettaglio l'immagine oppure per pubblicare i dati EXIF.</p>
+]]></content>
+  </entry>
+  
+</feed>
