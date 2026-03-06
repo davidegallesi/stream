@@ -1,7 +1,7 @@
 const fs    = require("fs");
 const path  = require("path");
 
-const PATH_PREFIX = "/stream/";
+const PATH_PREFIX = "/";
 
 const WIKILINK_RE = /\[\[\.\/([^\]|]+?)(?:\|[^\]]+?)?\]\]/g;
 
@@ -21,6 +21,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
   eleventyConfig.addPassthroughCopy("src/.nojekyll");
+  eleventyConfig.addPassthroughCopy("src/CNAME");
 
   eleventyConfig.addCollection("stream", function (collectionApi) {
     return collectionApi
