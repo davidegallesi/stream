@@ -268,6 +268,8 @@ blockquote cite {
   letter-spacing: 0.08em;
 }
 .now-body p { margin-bottom: 0.6rem; }
+.now-body ul { padding-left: 1.25rem; margin-bottom: 0.6rem; list-style-type: square; }
+.now-body li { margin-bottom: 0.25rem; }
 .now-updated { font-size: 0.8rem; color: var(--muted); margin-bottom: 2rem; }
 
 /* ---- FOOTER ---- */
