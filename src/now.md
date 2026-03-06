@@ -20,6 +20,7 @@ Hello, my name is Davide Gallesi I live in [Milano](https://en.wikipedia.org/wik
 - Slowing down.
 - Sharing (rarely) short thoughts, photos, quotes [here](https://mastodon.uno/@davidegallesi).
 
-<p class="now-updated">Updated March 2024</p>
-
+<br>
+<p class="now-updated">Updated March 2026</p>
+<br>
 <small>The <b>/now</b> page movement has been inspired by <a href="https://sivers.org/nowff">Derek Sievers</a>.</small>
