@@ -1,8 +1,4 @@
-{% if post.data.type == "note" %}
-  <div class="note-body">{{ post.templateContent | safe }}</div>
-  <button class="note-more" aria-label="Leggi tutto">more</button>
-
-{% elif post.data.type == "quote" %}
+{% if post.data.type == "quote" %}
   <blockquote>
     {{ post.templateContent | safe }}
     {% if post.data.author %}<cite>— {{ post.data.author }}</cite>{% endif %}

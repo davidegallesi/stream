@@ -329,31 +329,6 @@ a.rss-link {
 }
 a.rss-link:hover { color: #f26522; }
 
-/* ---- NOTE COLLAPSE ---- */
-.note-body {
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-.note-body.expanded {
-  display: block;
-}
-.note-more {
-  background: var(--tag-note);
-  color: var(--text);
-  border: none;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 0.2rem 0.65rem;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  display: none;
-  font-family: inherit;
-}
-.note-more.visible { display: inline-block; }
-
 /* ---- IMAGE POST ---- */
 .post-image { margin: 0; }
 .post-image img { width: 100%; height: auto; display: block; border-radius: 4px; }
