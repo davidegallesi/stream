@@ -344,6 +344,12 @@ a.more-link {
   transition: opacity 0.15s;
 }
 a.more-link:hover { opacity: 1; }
+a.more-link svg {
+  transition: transform 0.2s ease;
+}
+a.more-link:hover svg {
+  transform: rotate(45deg);
+}
 
 /* ---- IMAGE POST ---- */
 .post-image { margin: 0; }
