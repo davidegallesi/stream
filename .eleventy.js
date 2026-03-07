@@ -69,6 +69,17 @@ module.exports = function (eleventyConfig) {
   // Restituisce l'SVG inline per il tipo di post
   eleventyConfig.addFilter("postIcon", (type) => ICONS[type] || "");
 
+  eleventyConfig.addFilter("stripHtml", (str) =>
+    (str || "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim()
+  );
+
+  eleventyConfig.addFilter("truncateChars", (str, n) => {
+    const s = str || "";
+    if (s.length <= n) return s;
+    const next = s.indexOf(" ", n);
+    return next === -1 ? s : s.slice(0, next);
+  });
+
   // ── Backlinks ──────────────────────────────────────────────────────────────
   eleventyConfig.addFilter("backlinksFor", function (inputPath, collection) {
     const currentSlug = path.basename(inputPath, path.extname(inputPath));
