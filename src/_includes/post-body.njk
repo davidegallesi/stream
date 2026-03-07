@@ -19,5 +19,10 @@
   {% endif %}
 
 {% else %}
-  {{ post.templateContent | safe }}
+  {% set plainText = post.templateContent | stripHtml %}
+  {% if plainText.length > 160 %}
+    <p class="note-preview">{{ plainText | truncateChars(160) }}<a href="{{ post.url | url }}" class="more-link post-type note" title="Leggi il post completo">&#8230;</a></p>
+  {% else %}
+    {{ post.templateContent | safe }}
+  {% endif %}
 {% endif %}
