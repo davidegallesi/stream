@@ -345,6 +345,8 @@ a.more-link {
 }
 a.more-link:hover { opacity: 1; }
 a.more-link svg {
+  display: inline-block;
+  vertical-align: middle;
   transition: transform 0.2s ease;
 }
 a.more-link:hover svg {
