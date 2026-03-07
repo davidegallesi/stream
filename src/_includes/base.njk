@@ -67,6 +67,19 @@
       applyTheme(e.matches ? 'dark' : 'light');
     }
   });
+
+  // Note collapse
+  document.querySelectorAll('.note-body').forEach(function(body) {
+    var btn = body.nextElementSibling;
+    if (!btn || !btn.classList.contains('note-more')) return;
+    if (body.scrollHeight > body.clientHeight) {
+      btn.classList.add('visible');
+    }
+    btn.addEventListener('click', function() {
+      body.classList.add('expanded');
+      btn.style.display = 'none';
+    });
+  });
 </script>
 </body>
 </html>
