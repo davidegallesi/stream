@@ -333,6 +333,11 @@ a.rss-link:hover { color: #f26522; }
 .note-preview {
   display: block;
 }
+.note-preview a.more-link {
+  display: block;
+  text-align: right;
+  margin-top: 0.2rem;
+}
 a.more-link.post-type {
   vertical-align: middle;
   margin-left: 0.4rem;
