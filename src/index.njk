@@ -15,6 +15,10 @@ pageTitle: Stream
       <time datetime="{{ post.date | htmlDateString }}">
         {{ post.date | dataLeggibile }} &middot; {{ post.date | ora }}
       </time>
+      {% if post.data.type != "quote" and post.data.type != "link" and post.data.type != "image" %}
+        {% set plainText = post.templateContent | stripHtml %}
+        {% if plainText.length > 320 %}<a href="{{ post.url | url }}" class="more-link" title="Leggi il post completo">read more</a>{% endif %}
+      {% endif %}
     </div>
     <div class="post-body">
       {% include "post-body.njk" %}

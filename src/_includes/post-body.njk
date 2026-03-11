@@ -21,7 +21,7 @@
 {% else %}
   {% set plainText = post.templateContent | stripHtml %}
   {% if plainText.length > 320 %}
-    <p class="note-preview">{{ plainText | truncateChars(320) }}</p><a href="{{ post.url | url }}" class="more-link" title="Leggi il post completo">more</a>
+    <p class="note-preview">{{ plainText | truncateChars(320) }}</p>
   {% else %}
     {{ post.templateContent | safe }}
   {% endif %}

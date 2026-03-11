@@ -38,7 +38,7 @@ layout: base.njk
 {% set backlinks = page.inputPath | backlinksFor(collections.stream) %}
 {% if backlinks.length %}
 <section class="backlinks">
-  <h2 class="backlinks-title">Citato in</h2>
+  <h2 class="backlinks-title">Linked in</h2>
   <ul class="backlinks-list">
     {% for post in backlinks %}
     <li>
