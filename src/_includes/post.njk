@@ -44,9 +44,6 @@ layout: base.njk
     <li>
       <a href="{{ post.url | url }}">
         {{ post.date | dataLeggibile }}
-        <span class="backlink-type {{ post.data.type }}" title="{{ post.data.type }}">
-          {{ post.data.type | postIcon | safe }}
-        </span>
       </a>
     </li>
     {% endfor %}
