@@ -332,31 +332,19 @@ a.rss-link:hover { color: #f26522; }
 /* ---- NOTE MORE LINK ---- */
 .note-preview {
   display: block;
-}
-.note-preview a.more-link {
-  display: block;
-  text-align: right;
-  margin-top: 0.2rem;
-}
-a.more-link.post-type {
-  vertical-align: middle;
-  margin-left: 0.4rem;
+  margin-bottom: 0;
 }
 a.more-link {
+  display: block;
+  text-align: right;
   text-decoration: none;
-  flex-shrink: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
   opacity: 0.85;
   transition: opacity 0.15s;
+  margin-top: 0.2rem;
 }
 a.more-link:hover { opacity: 1; }
-a.more-link svg {
-  display: inline-block;
-  vertical-align: middle;
-  transition: transform 0.2s ease;
-}
-a.more-link:hover svg {
-  transform: rotate(45deg);
-}
 
 /* ---- IMAGE POST ---- */
 .post-image { margin: 0; }
