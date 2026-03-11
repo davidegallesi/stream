@@ -45,11 +45,16 @@ permalink: /archivio/
   function applyFilters() {
     const type = document.querySelector('.filter-btn.active').dataset.type;
     const year = yearSelect.value;
+    let lastVisible = null;
     posts.forEach(post => {
       const typeMatch = type === 'all' || post.dataset.type === type;
       const yearMatch = year === 'all' || post.dataset.year === year;
-      post.style.display = (typeMatch && yearMatch) ? '' : 'none';
+      const visible = typeMatch && yearMatch;
+      post.style.display = visible ? '' : 'none';
+      post.classList.remove('last-visible');
+      if (visible) lastVisible = post;
     });
+    if (lastVisible) lastVisible.classList.add('last-visible');
   }
 
   buttons.forEach(btn => {

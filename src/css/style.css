@@ -88,6 +88,7 @@ header nav a.active { color: var(--text); font-weight: 500; }
 /* ---- SINGOLO POST ---- */
 .post { padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
 .post:last-of-type { border-bottom: none; }
+.post.last-visible { border-bottom: none; }
 
 .post-meta {
   font-size: 0.75rem;
@@ -98,6 +99,7 @@ header nav a.active { color: var(--text); font-weight: 500; }
   margin-bottom: 0.6rem;
 }
 
+.post-meta .post-type { display: none; }
 .post-type,
 .post-type.note,
 .post-type.link,
