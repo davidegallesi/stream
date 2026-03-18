@@ -21,7 +21,7 @@ layout: base.njk
       <a class="external-link" href="{{ url }}" target="_blank" rel="noopener">
         ↗ {{ linkTitle or url }}
       </a>
-      {% if content %}<p class="link-desc">{{ content | safe }}</p>{% endif %}
+      {% if content %}<div class="link-desc">{{ content | safe }}</div>{% endif %}
     {% elif type == "image" %}
       {% if image %}
       <figure class="post-image">

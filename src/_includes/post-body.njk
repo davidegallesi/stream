@@ -8,7 +8,7 @@
   <a class="external-link" href="{{ post.data.url }}" target="_blank" rel="noopener">
     ↗ {{ post.data.linkTitle or post.data.url }}
   </a>
-  {% if post.templateContent %}<p class="link-desc">{{ post.templateContent | safe }}</p>{% endif %}
+  {% if post.templateContent %}<div class="link-desc">{{ post.templateContent | safe }}</div>{% endif %}
 
 {% elif post.data.type == "image" %}
   {% if post.data.image %}
