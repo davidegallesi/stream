@@ -1,0 +1,24 @@
+---
+permalink: /feed.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Stream</title>
+  <subtitle>Pensieri, link, citazioni e digressioni.</subtitle>
+  <link href="{{ site.siteUrl }}/feed.xml" rel="self"/>
+  <link href="{{ site.siteUrl }}/"/>
+  <id>{{ site.siteUrl }}/</id>
+  {% if collections.stream.length %}
+  <updated>{{ collections.stream[0].date | rfc3339 }}</updated>
+  {% endif %}
+  {% for post in collections.stream | head(20) %}
+  <entry>
+    <title>{{ post.data.type }} — {{ post.date | htmlDateString }}</title>
+    <link href="{{ site.siteUrl }}{{ post.url }}"/>
+    <id>{{ site.siteUrl }}{{ post.url }}</id>
+    <updated>{{ post.date | rfc3339 }}</updated>
+    <content type="html"><![CDATA[{% if post.data.type == "image" and post.data.image %}<figure><img src="{{ site.siteUrl }}{{ post.data.image }}" alt="{{ post.data.imageAlt or '' }}" /></figure>{% elif post.data.type == "link" and post.data.url %}<p><a href="{{ post.data.url }}">{{ post.data.linkTitle or post.data.url }}</a></p>{% endif %}{{ post.templateContent | safe }}]]></content>
+  </entry>
+  {% endfor %}
+</feed>
