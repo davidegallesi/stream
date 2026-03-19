@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ pageTitle or "Stream" }}</title>
+  <title>{{ pageTitle or "marginalia" }}</title>
   <link rel="stylesheet" href="{{ "/css/style.css" | url }}" />
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/img/favicon-32.png" | url }}" />
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "/img/favicon-16.png" | url }}" />
@@ -24,7 +24,7 @@
 </head>
 <body>
   <header>
-    <h1><a href="{{ "/" | url }}">A life stream</a></h1>
+    <h1><a href="{{ "/" | url }}">marginalia</a></h1>
     <nav>
       <a href="{{ "/archivio/" | url }}" {% if page.url == "/archivio/" %}class="active"{% endif %}>archivio</a>
       <a href="{{ "/now/" | url }}" {% if page.url == "/now/" %}class="active"{% endif %}>now</a>
