@@ -364,18 +364,11 @@ body.home {
 }
 
 .home-col-left .post:last-of-type { border-bottom: none; }
-.home-col-right .post {
-  border: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 10px;
-}
+.home-col-right .post { border-bottom: none; }
 .home-col-title {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+  font-size: 0.85rem;
   color: var(--muted);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.6rem;
   text-align: center;
 }
 .home-col-right .post-image img { width: 80%; margin: 0 auto; }

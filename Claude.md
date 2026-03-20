@@ -18,8 +18,7 @@
   npm run quote
   npm run image
 
-  usa sempre `npm run build` prima di fare commit
-
+  
   Struttura
 
   .eleventy.js          # configurazione Eleventy, filtri, trasformazioni
