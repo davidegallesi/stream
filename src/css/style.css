@@ -366,7 +366,7 @@ body.home {
 .home-col-left .post:last-of-type { border-bottom: none; }
 .home-col-right { align-self: start; justify-self: end; }
 .home-col-right .post { border-bottom: none; }
-.home-col-right .post-image img { width: 80%; margin: 0 0 0 auto; }
+.home-col-right .post-image img { width: 100%; display: block; }
 
 @media (max-width: 680px) {
   body.home { max-width: 640px; }
