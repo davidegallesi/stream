@@ -365,9 +365,16 @@ body.wide {
 }
 
 .home-col-left .post:last-of-type { border-bottom: none; }
-.home-col-right { align-self: start; justify-self: end; }
+.home-col-right { align-self: center; justify-self: end; }
 .home-col-right .post { border-bottom: none; }
 .home-col-right .post-image img { width: 100%; display: block; }
+.home-col-right .post-image {
+  background: #f5f6f2;
+  padding: 16px 16px 56px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.22);
+  transform: rotate(1.8deg);
+  transform-origin: center top;
+}
 
 @media (max-width: 680px) {
   body.home { max-width: 640px; }
