@@ -1,28 +1,85 @@
 ---
 layout: base.njk
 pageTitle: Stream
+bodyClass: home
 ---
 
-{% set twoMonthsAgo = collections.stream | twoMonthsAgo %}
+{% set lastNote  = collections.stream_note  | first %}
+{% set lastLink  = collections.stream_link  | first %}
+{% set lastQuote = collections.stream_quote | first %}
+{% set lastImage = collections.stream_image | first %}
 
-{% for post in collections.stream %}
-  {% if post.date >= twoMonthsAgo %}
-  <article class="post">
-    <div class="post-meta">
-      <span class="post-type {{ post.data.type }}" title="{{ post.data.type }}">
-        {{ post.data.type | postIcon | safe }}
-      </span>
-      <time datetime="{{ post.date | htmlDateString }}">
-        {{ post.date | dataLeggibile }} &middot; {{ post.date | ora }}
-      </time>
-      {% if post.data.type != "quote" and post.data.type != "link" and post.data.type != "image" %}
+<div class="home-grid">
+
+  <div class="home-col-left">
+
+    {% if lastNote %}
+    {% set post = lastNote %}
+    <article class="post">
+      <div class="post-meta">
+        <span class="post-type {{ post.data.type }}" title="{{ post.data.type }}">
+          {{ post.data.type | postIcon | safe }}
+        </span>
+        <time datetime="{{ post.date | htmlDateString }}">
+          {{ post.date | dataLeggibile }} &middot; {{ post.date | ora }}
+        </time>
         {% set plainText = post.templateContent | stripHtml %}
         {% if plainText.length > 320 %}<a href="{{ post.url | url }}" class="more-link" title="Leggi il post completo">read more</a>{% endif %}
-      {% endif %}
-    </div>
-    <div class="post-body">
-      {% include "post-body.njk" %}
-    </div>
-  </article>
-  {% endif %}
-{% endfor %}
+      </div>
+      <div class="post-body">
+        {% include "post-body.njk" %}
+      </div>
+    </article>
+    {% endif %}
+
+    {% if lastLink %}
+    {% set post = lastLink %}
+    <article class="post">
+      <div class="post-meta">
+        <span class="post-type {{ post.data.type }}" title="{{ post.data.type }}">
+          {{ post.data.type | postIcon | safe }}
+        </span>
+        <time datetime="{{ post.date | htmlDateString }}">
+          {{ post.date | dataLeggibile }} &middot; {{ post.date | ora }}
+        </time>
+      </div>
+      <div class="post-body">
+        {% include "post-body.njk" %}
+      </div>
+    </article>
+    {% endif %}
+
+    {% if lastQuote %}
+    {% set post = lastQuote %}
+    <article class="post">
+      <div class="post-meta">
+        <span class="post-type {{ post.data.type }}" title="{{ post.data.type }}">
+          {{ post.data.type | postIcon | safe }}
+        </span>
+        <time datetime="{{ post.date | htmlDateString }}">
+          {{ post.date | dataLeggibile }} &middot; {{ post.date | ora }}
+        </time>
+      </div>
+      <div class="post-body">
+        {% include "post-body.njk" %}
+      </div>
+    </article>
+    {% endif %}
+
+  </div>
+
+  <div class="home-col-right">
+
+    {% if lastImage %}
+    {% set post = lastImage %}
+    <article class="post">
+      <p class="home-col-title">{{ post.date | dataLeggibile }}</p>
+      <div class="post-body">
+        {% include "post-body.njk" %}
+      </div>
+    </article>
+    {% endif %}
+
+  </div>
+
+</div>

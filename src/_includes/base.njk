@@ -22,7 +22,7 @@
   })();
 </script>
 </head>
-<body>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
   <header>
     <h1><a href="{{ "/" | url }}">marginalia</a></h1>
     <nav>
