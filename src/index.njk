@@ -7,7 +7,6 @@ bodyClass: home
 {% set lastNote  = collections.stream_note  | first %}
 {% set lastLink  = collections.stream_link  | first %}
 {% set lastQuote = collections.stream_quote | first %}
-{% set lastImage = collections.stream_image | first %}
 
 <div class="home-grid">
 
@@ -69,17 +68,23 @@ bodyClass: home
   </div>
 
   <div class="home-col-right">
-
-    {% if lastImage %}
-    {% set post = lastImage %}
-    <article class="post">
-      <p class="home-col-title">{{ post.date | dataLeggibile }}</p>
-      <div class="post-body">
-        {% include "post-body.njk" %}
-      </div>
-    </article>
-    {% endif %}
-
+    <article class="post" id="random-image"></article>
   </div>
 
 </div>
+
+<script type="application/json" id="image-data">
+[{% for post in collections.stream_image %}{"src":"{{ post.data.image | url }}","alt":"{{ post.data.imageAlt or '' }}","caption":"{{ post.templateContent | stripHtml | replace('"', '&quot;') }}"}{% if not loop.last %},{% endif %}{% endfor %}]
+</script>
+
+<script>
+(function () {
+  var data = JSON.parse(document.getElementById('image-data').textContent);
+  if (!data.length) return;
+  var item = data[Math.floor(Math.random() * data.length)];
+  var fig = '<figure class="post-image"><img src="' + item.src + '" alt="' + item.alt + '" loading="lazy">';
+  if (item.caption) fig += '<figcaption>' + item.caption + '</figcaption>';
+  fig += '</figure>';
+  document.getElementById('random-image').innerHTML = '<div class="post-body">' + fig + '</div>';
+})();
+</script>

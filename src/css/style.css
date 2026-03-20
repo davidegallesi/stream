@@ -364,14 +364,9 @@ body.home {
 }
 
 .home-col-left .post:last-of-type { border-bottom: none; }
+.home-col-right { align-self: start; justify-self: end; }
 .home-col-right .post { border-bottom: none; }
-.home-col-title {
-  font-size: 0.85rem;
-  color: var(--muted);
-  margin-bottom: 0.6rem;
-  text-align: center;
-}
-.home-col-right .post-image img { width: 80%; margin: 0 auto; }
+.home-col-right .post-image img { width: 80%; margin: 0 0 0 auto; }
 
 @media (max-width: 680px) {
   body.home { max-width: 640px; }
