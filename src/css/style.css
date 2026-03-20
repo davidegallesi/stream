@@ -352,7 +352,8 @@ a.more-link {
 a.more-link:hover { opacity: 1; }
 
 /* ---- HOME — layout a due colonne ---- */
-body.home {
+body.home,
+body.wide {
   max-width: 960px;
 }
 
