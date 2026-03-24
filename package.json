@@ -10,8 +10,9 @@
     "quote": "node new-post.js quote",
     "image": "node new-post.js image"
   },
-  "dependencies": {},
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^14.1.1",
+    "markdown-it-footnote": "^4.0.0"
   }
 }

@@ -1,5 +1,7 @@
 const fs    = require("fs");
 const path  = require("path");
+const markdownIt         = require("markdown-it");
+const markdownItFootnote = require("markdown-it-footnote");
 
 const PATH_PREFIX = "/";
 
@@ -17,6 +19,17 @@ const ICONS = {
 };
 
 module.exports = function (eleventyConfig) {
+
+  const md = markdownIt({ html: true, linkify: true, typographer: true })
+    .use(markdownItFootnote);
+
+  md.renderer.rules.footnote_ref = (tokens, idx) => {
+    const id    = tokens[idx].meta.id + 1;
+    const refid = tokens[idx].meta.subId > 0 ? `:${tokens[idx].meta.subId}` : "";
+    return `<sup class="footnote-ref"><a href="#fn${id}" id="fnref${id}${refid}">✽</a></sup>`;
+  };
+
+  eleventyConfig.setLibrary("md", md);
 
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
@@ -78,6 +91,59 @@ module.exports = function (eleventyConfig) {
     if (s.length <= n) return s;
     const next = s.indexOf(" ", n);
     return next === -1 ? s : s.slice(0, next);
+  });
+
+  // Tronca HTML a n caratteri visibili preservando i tag inline e spostando
+  // la sezione footnotes in un div hidden così il popover può trovarla.
+  eleventyConfig.addFilter("truncateHtml", (html, n) => {
+    const voidTags = new Set(["br","hr","img","input","meta","link","area","base","col","embed","param","source","track","wbr"]);
+
+    // Separa la sezione footnotes dal contenuto principale
+    const fnMatch = html.match(/<section class="footnotes">[\s\S]*<\/section>/);
+    const mainHtml = html.replace(/<section class="footnotes">[\s\S]*<\/section>/, "");
+
+    // Controlla se il testo visibile supera n
+    const plainLen = mainHtml.replace(/<[^>]+>/g, "").length;
+    if (plainLen <= n) return html; // nessuna troncatura
+
+    // Scorri il markup contando solo i caratteri visibili
+    let count = 0;
+    let result = "";
+    let i = 0;
+    const stack = [];
+
+    while (i < mainHtml.length) {
+      if (mainHtml[i] === "<") {
+        const end = mainHtml.indexOf(">", i);
+        if (end === -1) break;
+        const tag = mainHtml.slice(i, end + 1);
+        result += tag;
+        const closeM = tag.match(/^<\/([a-zA-Z][a-zA-Z0-9]*)/);
+        const openM  = tag.match(/^<([a-zA-Z][a-zA-Z0-9]*)/);
+        if (closeM) {
+          const tn = closeM[1].toLowerCase();
+          const idx = stack.lastIndexOf(tn);
+          if (idx !== -1) stack.splice(idx, 1);
+        } else if (openM && !tag.endsWith("/>")) {
+          const tn = openM[1].toLowerCase();
+          if (!voidTags.has(tn)) stack.push(tn);
+        }
+        i = end + 1;
+      } else {
+        if (count >= n) break;
+        result += mainHtml[i];
+        count++;
+        i++;
+      }
+    }
+
+    // Chiudi i tag aperti
+    for (let j = stack.length - 1; j >= 0; j--) result += `</${stack[j]}>`;
+
+    // Appendi footnotes in un div nascosto per il popover
+    if (fnMatch) result += `<div hidden>${fnMatch[0]}</div>`;
+
+    return result;
   });
 
   // ── Backlinks ──────────────────────────────────────────────────────────────

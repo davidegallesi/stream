@@ -4,9 +4,7 @@ layout: base.njk
 
 <article class="post single-post">
   <div class="post-meta">
-    <span class="post-type {{ type }}" title="{{ type }}">
-      {{ type | postIcon | safe }}
-    </span>
+    {% if title %}<h2 class="post-title">{{ title }}</h2>{% endif %}
     <time datetime="{{ page.date | htmlDateString }}">
       {{ page.date | dataLeggibile }} &middot; {{ page.date | ora }}
     </time>
@@ -38,16 +36,11 @@ layout: base.njk
 {% set backlinks = page.inputPath | backlinksFor(collections.stream) %}
 {% if backlinks.length %}
 <section class="backlinks">
-  <h2 class="backlinks-title">Citato in</h2>
+  <h2 class="backlinks-title">linked in</h2>
   <ul class="backlinks-list">
     {% for post in backlinks %}
     <li>
-      <a href="{{ post.url | url }}">
-        {{ post.date | dataLeggibile }}
-        <span class="backlink-type {{ post.data.type }}" title="{{ post.data.type }}">
-          {{ post.data.type | postIcon | safe }}
-        </span>
-      </a>
+      <a href="{{ post.url | url }}">{{ post.date | dataLeggibile }}</a>
     </li>
     {% endfor %}
   </ul>

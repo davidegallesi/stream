@@ -1,15 +1,15 @@
 ---
 layout: base.njk
-pageTitle: Archivio — Stream
+pageTitle: Archivio — marginalia
 permalink: /archivio/
 ---
 
 <div class="filter-bar">
-  <button class="filter-btn active" data-type="all">Tutti</button>
-  <button class="filter-btn" data-type="note">{{ "note" | postIcon | safe }} Notes</button>
-  <button class="filter-btn" data-type="link">{{ "link" | postIcon | safe }} Links</button>
-  <button class="filter-btn" data-type="quote">{{ "quote" | postIcon | safe }} Quotes</button>
-  <button class="filter-btn" data-type="image">{{ "image" | postIcon | safe }} Images</button>
+  <button class="filter-btn active" data-type="all">tutti</button>
+  <button class="filter-btn" data-type="note">note</button>
+  <button class="filter-btn" data-type="link">link</button>
+  <button class="filter-btn" data-type="quote">citazioni</button>
+  <button class="filter-btn" data-type="image">immagini</button>
   <span class="year-select-wrap">
     <select id="year-select" class="year-select" aria-label="Filtra per anno">
       <option value="all">Tutti gli anni</option>
@@ -24,12 +24,18 @@ permalink: /archivio/
 {% for post in collections.stream %}
 <article class="post" data-type="{{ post.data.type }}" data-year="{{ post.date | year }}">
   <div class="post-meta">
-    <span class="post-type {{ post.data.type }}" title="{{ post.data.type }}">
-      {{ post.data.type | postIcon | safe }}
-    </span>
-    <time datetime="{{ post.date | htmlDateString }}">
-      {{ post.date | dataLeggibile }} &middot; {{ post.date | ora }}
-    </time>
+    {% if post.data.title %}
+      <a href="{{ post.url | url }}" class="post-title">{{ post.data.title }}</a>
+      <time datetime="{{ post.date | htmlDateString }}">
+        {{ post.date | dataLeggibile }} &middot; {{ post.date | ora }}
+      </time>
+    {% else %}
+      <a href="{{ post.url | url }}" class="post-permalink">
+        <time datetime="{{ post.date | htmlDateString }}">
+          {{ post.date | dataLeggibile }} &middot; {{ post.date | ora }}
+        </time>
+      </a>
+    {% endif %}
   </div>
   <div class="post-body">
     {% include "post-body.njk" %}

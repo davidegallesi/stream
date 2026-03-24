@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ pageTitle or "Stream" }}</title>
+  <title>{{ pageTitle or "marginalia" }}</title>
   <link rel="stylesheet" href="{{ "/css/style.css" | url }}" />
   <link rel="icon" type="image/png" sizes="32x32" href="{{ "/img/favicon-32.png" | url }}" />
   <link rel="icon" type="image/png" sizes="16x16" href="{{ "/img/favicon-16.png" | url }}" />
@@ -24,7 +24,7 @@
 </head>
 <body>
   <header>
-    <h1><a href="{{ "/" | url }}">A life stream</a></h1>
+    <h1><a href="{{ "/" | url }}">marginalia</a></h1>
     <nav>
       <a href="{{ "/archivio/" | url }}" {% if page.url == "/archivio/" %}class="active"{% endif %}>archivio</a>
       <a href="{{ "/now/" | url }}" {% if page.url == "/now/" %}class="active"{% endif %}>now</a>
@@ -67,6 +67,61 @@
       applyTheme(e.matches ? 'dark' : 'light');
     }
   });
+</script>
+<script>
+  (function () {
+    var popover = null;
+
+    function removePopover() {
+      if (popover) { popover.remove(); popover = null; }
+    }
+
+    function showPopover(content, refEl) {
+      removePopover();
+      popover = document.createElement('div');
+      popover.className = 'footnote-popover';
+      popover.innerHTML = content;
+      document.body.appendChild(popover);
+
+      var rect = refEl.getBoundingClientRect();
+      var pw = popover.offsetWidth;
+      var ph = popover.offsetHeight;
+      var vw = window.innerWidth;
+      var vh = window.innerHeight;
+
+      var top = rect.bottom + 8;
+      if (top + ph > vh - 8) top = rect.top - ph - 8;
+
+      var left = rect.left;
+      if (left + pw > vw - 8) left = vw - pw - 8;
+      if (left < 8) left = 8;
+
+      popover.style.top  = top  + 'px';
+      popover.style.left = left + 'px';
+    }
+
+    document.addEventListener('click', function (e) {
+      var ref = e.target.closest('.footnote-ref a');
+      if (ref) {
+        e.preventDefault();
+        var id = ref.getAttribute('href').slice(1);
+        var scope = ref.closest('.post') || document;
+        var fnEl = scope.querySelector('#' + id);
+        if (!fnEl) { removePopover(); return; }
+        // Clona il contenuto rimuovendo il backref
+        var clone = fnEl.cloneNode(true);
+        var back = clone.querySelector('.footnote-backref');
+        if (back) back.remove();
+        showPopover(clone.innerHTML.trim(), ref);
+        return;
+      }
+      if (popover && !popover.contains(e.target)) removePopover();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') removePopover();
+    });
+  })();
 </script>
 </body>
 </html>
